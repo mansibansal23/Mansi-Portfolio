@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansi Bansal — Product Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        paper: '#FDFBF7', /* The warm "Gianmarco" background */
+                        ink: '#1A1A1A',
+                        subtle: '#888888'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #1A1A1A;
+            -webkit-font-smoothing: antialiased;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hover-underline {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #1A1A1A;
+            transition: width 0.3s ease;
+        }
+        .hover-underline:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="px-6 md:px-12 lg:px-24 py-12">
+
+    <!-- Navigation (Minimal) -->
+    <nav class="flex justify-between items-center mb-24 reveal">
+        <a href="#" class="text-lg font-serif italic font-semibold">MB.</a>
+        <div class="space-x-8 text-sm font-sans tracking-wide">
+            <a href="#work" class="hover-underline">Work</a>
+            <a href="#about" class="hover-underline">Profile</a>
+            <a href="mailto:mansibansal2301@gmail.com" class="hover-underline">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-5xl mx-auto mb-40 reveal">
+        <h1 class="text-4xl md:text-7xl font-serif leading-[1.1] mb-12">
+            I am Mansi Bansal.<br>
+            A Product Leader bridging the gap between <span class="italic text-subtle">complex engineering</span> and <span class="italic text-subtle">human experience</span>.
+        </h1>
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+            <p class="font-sans text-subtle max-w-md leading-relaxed">
+                Currently building AI-native EdTech at AceLucid. Previously engineering backends at McKinsey and transforming banking infrastructure at Canara Bank.
+            </p>
+            <div class="flex flex-col font-sans text-sm space-y-2">
+                <span class="text-ink font-medium">Core Focus</span>
+                <span class="text-subtle">AI & Machine Learning</span>
+                <span class="text-subtle">FinTech & Compliance</span>
+                <span class="text-subtle">Technical Product Management</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Selected Work (The Gallery) -->
+    <section id="work" class="max-w-6xl mx-auto mb-40">
+        <div class="border-b border-gray-200 pb-4 mb-16 flex justify-between items-end reveal">
+            <h2 class="font-sans text-xs uppercase tracking-widest text-subtle">Selected Case Studies</h2>
+            <span class="font-sans text-xs text-subtle">2019 — 2025</span>
+        </div>
+
+        <!-- Project 1 -->
+        <div class="group cursor-pointer mb-24 reveal">
+            <div class="flex flex-col md:flex-row justify-between items-baseline border-b border-gray-200 pb-8 mb-6 transition duration-500 group-hover:border-black">
+                <h3 class="text-3xl md:text-5xl font-serif">The AI Educator</h3>
+                <span class="font-sans text-sm text-subtle mt-2 md:mt-0">AceLucid Technologies</span>
+            </div>
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-5">
+                    <p class="font-sans text-subtle leading-relaxed mb-6">
+                        An AI-native learning management system serving 30+ educators. We moved beyond simple digitization to <strong>Generative AI content creation</strong>, reducing educator workload by 60%.
+                    </p>
+                    <ul class="font-sans text-xs space-y-1 text-ink">
+                        <li>+ 40% Student Outcomes</li>
+                        <li>+ 30% Delivery Velocity</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-7 md:pl-12 hidden md:block opacity-0 group-hover:opacity-100 transition duration-700 transform translate-y-4 group-hover:translate-y-0">
+                    <!-- Placeholder for a project screenshot if you have one, else text -->
+                    <div class="bg-gray-100 p-8 h-full flex items-center justify-center italic text-subtle font-serif">
+                        "Adaptive learning through intelligent feedback loops."
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="group cursor-pointer mb-24 reveal">
+            <div class="flex flex-col md:flex-row justify-between items-baseline border-b border-gray-200 pb-8 mb-6 transition duration-500 group-hover:border-black">
+                <h3 class="text-3xl md:text-5xl font-serif">Conversational HR</h3>
+                <span class="font-sans text-sm text-subtle mt-2 md:mt-0">SaaS Platform</span>
+            </div>
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-5">
+                    <p class="font-sans text-subtle leading-relaxed mb-6">
+                        Transforming a static HRMS into an interactive experience. Integrated <strong>Apollo & Tawk.to</strong> to handle 15+ categories of employee queries automatically.
+                    </p>
+                    <ul class="font-sans text-xs space-y-1 text-ink">
+                        <li>- 50% Operational Costs</li>
+                        <li>0 Critical Production Incidents</li>
+                    </ul>
+                </div>
+                 <div class="md:col-span-7 md:pl-12 hidden md:block opacity-0 group-hover:opacity-100 transition duration-700 transform translate-y-4 group-hover:translate-y-0">
+                    <div class="bg-gray-100 p-8 h-full flex items-center justify-center italic text-subtle font-serif">
+                        "Automation of benefits, payroll, and compliance queries."
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="group cursor-pointer reveal">
+            <div class="flex flex-col md:flex-row justify-between items-baseline border-b border-gray-200 pb-8 mb-6 transition duration-500 group-hover:border-black">
+                <h3 class="text-3xl md:text-5xl font-serif">Rural Banking API</h3>
+                <span class="font-sans text-sm text-subtle mt-2 md:mt-0">Canara Bank / APGB</span>
+            </div>
+            <div class="grid md:grid-cols-12 gap-8">
+                <div class="md:col-span-5">
+                    <p class="font-sans text-subtle leading-relaxed mb-6">
+                        Bridging the digital divide for 100+ rural branches. Led the transition from manual KYC to <strong>API-driven architecture</strong> (Aadhaar/PAN), ensuring compliance and speed.
+                    </p>
+                    <ul class="font-sans text-xs space-y-1 text-ink">
+                        <li>- 70% Manual Data Entry</li>
+                        <li>+ 95% First-Pass UAT Rate</li>
+                    </ul>
+                </div>
+                 <div class="md:col-span-7 md:pl-12 hidden md:block opacity-0 group-hover:opacity-100 transition duration-700 transform translate-y-4 group-hover:translate-y-0">
+                    <div class="bg-gray-100 p-8 h-full flex items-center justify-center italic text-subtle font-serif">
+                        "Secure data flow compliant with RBI guidelines."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Profile Section -->
+    <section id="about" class="max-w-6xl mx-auto mb-40 pt-20">
+        <div class="grid md:grid-cols-2 gap-16">
+            
+            <!-- Image Side -->
+            <div class="reveal">
+                <!-- Replace src with your actual image file -->
+                <img src="mansi-photo.jpg" alt="Mansi Bansal" class="w-full max-w-sm grayscale hover:grayscale-0 transition duration-700 object-cover rounded-sm">
+            </div>
+
+            <!-- Content Side -->
+            <div class="reveal">
+                <h2 class="font-serif text-3xl mb-8">Background</h2>
+                <p class="font-sans text-subtle leading-relaxed mb-8">
+                    My career has been defined by a duality: I understand the code, and I understand the customer. Starting as a Systems Engineer gave me the ability to speak to developers in their language (SQL, APIs, Architecture). Evolving into a Product Leader taught me how to translate those technical capabilities into business value.
+                </p>
+                <p class="font-sans text-subtle leading-relaxed mb-12">
+                    I thrive in ambiguity. Whether it's defining an MVP for an EdTech startup or restructuring compliance workflows for a national bank, my approach is the same: Data-backed decisions, rapid iteration, and ruthless prioritization.
+                </p>
+
+                <!-- Experience Table -->
+                <div class="space-y-6 font-sans text-sm border-t border-gray-200 pt-8">
+                    <div class="flex justify-between">
+                        <span class="font-medium">AceLucid Technologies</span>
+                        <span class="text-subtle">Product Owner</span>
+                        <span class="text-subtle text-xs">2025—Present</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-medium">McKinsey & Company</span>
+                        <span class="text-subtle">PM / Backend Dev</span>
+                        <span class="text-subtle text-xs">2024—2025</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-medium">Canara Bank</span>
+                        <span class="text-subtle">Business Analyst Lead</span>
+                        <span class="text-subtle text-xs">2021—2024</span>
+                    </div>
+                     <div class="flex justify-between">
+                        <span class="font-medium">Infosys</span>
+                        <span class="text-subtle">Systems Engineer</span>
+                        <span class="text-subtle text-xs">2015—2017</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-5xl mx-auto border-t border-gray-200 pt-12 pb-12 flex flex-col md:flex-row justify-between items-start md:items-center reveal">
+        <div>
+            <h2 class="font-serif text-2xl mb-2">Let's build something scalable.</h2>
+            <a href="mailto:mansibansal2301@gmail.com" class="font-sans text-subtle hover:text-black transition">mansibansal2301@gmail.com</a>
+        </div>
+        <div class="mt-8 md:mt-0 flex gap-6 text-sm font-sans">
+            <a href="https://www.linkedin.com/in/mansi-bansal23" target="_blank" class="hover-underline">LinkedIn</a>
+            <a href="#" class="hover-underline">Resume</a>
+        </div>
+    </footer>
+
+    <!-- Reveal Animation Script -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+</html>
